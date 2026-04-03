@@ -28,7 +28,7 @@ const hexToRGBA = (hex, alpha = 1) => {
 const HabitDashboard = () => {
   // --- 状态管理 ---
   const [habits, setHabits] = useState(() => {
-    const saved = localStorage.getItem('islelandHabits_v2');
+    const saved = localStorage.getItem('IsleLightHabits_v2');
     return saved ? JSON.parse(saved) : [];
   });
 
@@ -43,8 +43,8 @@ const HabitDashboard = () => {
   });
 
   useEffect(() => {
-    localStorage.setItem('islelandHabits_v2', JSON.stringify(habits));
-    document.title = "Isleland - 你的习惯岛屿";
+    localStorage.setItem('IsleLightHabits_v2', JSON.stringify(habits));
+    document.title = "IsleLight - 你的习惯岛屿";
   }, [habits]);
 
   // --- 区块链逻辑 ---
@@ -273,7 +273,7 @@ const HabitDashboard = () => {
   };
 
   return (
-    <div className="isleland-app">
+    <div className="IsleLight-app">
       <div className="cosmic-bg">
         <div className="sun-halo"></div>
         <div className="stars-cluster"></div>
@@ -285,7 +285,7 @@ const HabitDashboard = () => {
       <div className="dashboard-wrapper">
         <header className="app-header">
           <div className="brand-box">
-            <h1>Isleland</h1>
+            <h1>IsleLight·屿光</h1>
             <p>在宇宙星尘中点亮你的习惯 🌌</p>
           </div>
           <div className="header-right">
@@ -388,7 +388,7 @@ const HabitDashboard = () => {
 
       <style>{`
         /* 全局基础 */
-        .isleland-app { min-height: 100vh; background: #020208; color: white; font-family: system-ui, -apple-system, sans-serif; position: relative; overflow-x: hidden; }
+        .IsleLight-app { min-height: 100vh; background: #020208; color: white; font-family: system-ui, -apple-system, sans-serif; position: relative; overflow-x: hidden; }
         .cosmic-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
         
         .sun-halo {
