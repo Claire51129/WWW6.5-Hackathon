@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HabitDashboard from './HabitDashboard';
 import ExplorePage from './ExplorePage';
 import './index.css';
+import MusicPlayer from './MusicPlayer';
 
 function App() {
   const { address, isConnected } = useAccount();
@@ -125,7 +126,9 @@ function App() {
       ) : (
         <ExplorePage onBack={() => setCurrentPage('dashboard')} />
       )}
+      <MusicPlayer />
     </motion.div>
+    
   );
 }
 
